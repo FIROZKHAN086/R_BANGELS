@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Carousel = () => {
+const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
@@ -58,4 +58,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default Home;

@@ -1,11 +1,12 @@
 import React from 'react'
-import Home from "../Pages/home";
+
 import Slider from './Slider';
 import Card from './Card';
+import Home from '../Pages/Home';
 const Main = () => {
   return (
     <div>
-      <Home/>
+     <Home/>
       <Card/>
       <Slider/>
 
