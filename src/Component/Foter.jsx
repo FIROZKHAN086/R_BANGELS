@@ -136,7 +136,7 @@ const Foter = () => {
       {/* Bottom Section */}
       <div className="bg-gray-900 py-4">
         <p className="text-center text-sm text-gray-500">
-          © 2025 MyLogo. All rights reserved.
+          © 2025 FIROZKHAN. All rights reserved.
         </p>
       </div>
     </footer>
