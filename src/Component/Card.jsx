@@ -19,12 +19,12 @@ const Card = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8  ">
       <h2 className="text-3xl font-bold text-center mb-6">Our Bangels Collection</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {products.map((product) => (
-          <div key={product.id} className="bg-white rounded-lg shadow-lg hover:scale-110 transition-all overflow-hidden">
+          <div key={product.id} className="bg-white hover:shadow-slate-900 rounded-lg shadow-lg hover:scale-110 transition-all overflow-hidden">
             <img src={product.image} alt={product.description} className="w-full h-48 object-cover" />
 
             <div className="p-4">

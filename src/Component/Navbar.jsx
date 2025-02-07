@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { FaCarAlt } from "react-icons/fa";
+import { FaCarAlt, FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import {motion} from 'motion/react'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex  relative items-center justify-between bg-gray-800 text-white px-6 py-4 shadow-lg">
+    <motion.nav 
+    initial={{
+      x:0,
+      y:0,
+      opacity:0,
+    }}
+    animate={{
+      opacity:1,
+      animationDuration:3,
+    }}
+    className="flex  relative items-center justify-between bg-gray-800 text-white px-6 py-4 shadow-lg">
       {/* Logo */}
       <div className="text-2xl font-bold">
         <a href="/" className="hover:text-blue-400">
@@ -64,7 +75,7 @@ const Navbar = () => {
         </a>
       </div>
             <Link to={'/cart'}>
-            <button><FaCarAlt/></button>
+            <button><FaCartPlus/></button>
             </Link>
       {/* Login Button */}
       <Link to="/login">
@@ -104,7 +115,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
-    </nav>
+    </motion.nav>
   );
 };
 // NavBar Compontant Was Don

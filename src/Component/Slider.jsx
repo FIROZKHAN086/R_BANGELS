@@ -16,6 +16,7 @@ const Slider = () => {
       <Swiper
         spaceBetween={10} 
         slidesPerView={1} 
+        
         breakpoints={{
           640: {
             slidesPerView: 2, 
@@ -24,11 +25,13 @@ const Slider = () => {
             slidesPerView: 3, 
           },
           1024: {
-            slidesPerView: 4, 
+            slidesPerView: 1, 
+            
           },
+          
         }}
         loop={true} // 
-        autoplay={{ delay: 2500 }} 
+        autoplay={{ delay: 1 }} 
         pagination={{ clickable: true }} // ts
         navigation={true} 
       >

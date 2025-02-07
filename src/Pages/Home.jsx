@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <div className="relative w-full mt-2 max-w-3xl mx-auto">
       <div className=" relative overflow-hidden rounded-lg shadow-lg flex  justify-center">
-        <h2 className=" py-12 text-[#0a0b09]  mx-4 absolute text-4xl font-semibold ">Wellcome To <span className="text-5xl text-[#050501]">Rubina Banges</span> Shope</h2>
+        <h2 className=" py-12 text-[#0a0b09]  mx-4 absolute text-4xl font-semibold ">Wellcome To <span className="text-5xl text-[#050501] underline">Rubina Bangels</span> Shope</h2>
         <img
           className="w-screen h-[70vh] object-cover"
           src={slides[currentIndex].image}
