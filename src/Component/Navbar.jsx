@@ -78,7 +78,7 @@ const Navbar = () => {
             <button><FaCartPlus/></button>
             </Link>
       {/* Login Button */}
-      <Link to="/register">
+      <Link to="/login">
         <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition duration-300">
           Login
         </button>

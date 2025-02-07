@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Singup from "./Singup";
 
 const LoginPage = () => {
   // State to manage form fields
