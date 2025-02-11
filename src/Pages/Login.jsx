@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [login, setLogin] = useState(false)
@@ -7,6 +8,7 @@ const Login = () => {
       const [name, setName] = useState("");
       const [rememberMe, setRememberMe] = useState(false);
       const [agreeTerms, setAgreeTerms] = useState(false);
+      const navigate = useNavigate();
 
 
     const handleSubmit = (e) => {
@@ -91,6 +93,9 @@ const Login = () => {
                 {/* Login Button */}
                 <button
                   type="submit"
+                  onClick={()=>{
+                    navigate("/");
+                  }}
                   className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition"
                 >
                   Login
@@ -199,7 +204,9 @@ const Login = () => {
         <p className="mt-4 text-sm text-center">
           Already have an account?{" "}
           <a
-            onClick={()=>setLogin(false)}
+            onClick={()=>setLogin(false)
+            }
+            
             className="text-blue-500 hover:underline font-medium"
           >
             Login

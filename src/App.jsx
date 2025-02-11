@@ -5,21 +5,19 @@ import Cart from './Pages/Cart'
 import Login from './Pages/Login'
 import Navbar from './Component/Navbar'
 import Foter from './Component/Foter'
-import Singup from './Pages/Singup'
 import ProductDetail from './Component/ProductDetail'
 
 const App = () => {
   return (
     <div>
       <Navbar/>
-      
   <Routes>
  <Route path='/' element={<Main/>} />
  <Route path="/cart" element={<Cart/>} />
  <Route path="/login" element={<Login/>}/>
  <Route path="/product/:id" element={<ProductDetail />} />
 </Routes>
-<Foter/>
+    <Foter/>
     </div>
   )
 }
