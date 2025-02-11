@@ -74,6 +74,7 @@ const Navbar = () => {
           Spacel
         </Link>
       </div>
+      <div className='flex items-center justify-center gap-4'>
             <Link to={'/cart'}>
             <button><FaCartPlus/></button>
             </Link>
@@ -83,10 +84,11 @@ const Navbar = () => {
           Login
         </button>
       </Link>
+      </div>
 
       {/* Mobile Menu (Hidden on Desktop, Shown on Mobile) */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute z-50 flex flex-col justify-center items-center top-16 left-0 w-full bg-gray-800 text-white p-4">
+        <div className="lg:hidden absolute z-50 flex flex-col justify-center items-center top-16 left-0 w-full bg-gray-800/40  text-white p-4">
           <div className="space-y-4">
             <Link
               to={"/"}
@@ -110,11 +112,7 @@ const Navbar = () => {
               Spacel
             </Link>
            
-            <Link to="/login">
-              <button className="bg-blue-500 mt-5 hover:bg-blue-600 text-white px-4 py-2 rounded transition duration-300">
-                Login
-              </button>
-            </Link>
+            
           </div>
         </div>
       )}
