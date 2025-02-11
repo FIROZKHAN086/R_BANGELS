@@ -88,7 +88,7 @@ const Navbar = () => {
 
       {/* Mobile Menu (Hidden on Desktop, Shown on Mobile) */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute z-50 flex flex-col justify-center items-center top-16 left-0 w-full bg-gray-800/40  text-white p-4">
+        <div className="lg:hidden absolute z-50 flex flex-col justify-center items-center top-16 left-0 w-full bg-gray-800/60  text-white p-4">
           <div className="space-y-4">
             <Link
               to={"/"}
