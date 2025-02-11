@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../App.css'
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,11 +35,11 @@ const Home = () => {
   };
 
   return (
-    <div className="relative w-full mt-2 max-w-3xl mx-auto">
+    <div  className=" container relative w-screen mt-2 max-w-3xl mx-auto">
       <div className=" relative overflow-hidden rounded-lg shadow-lg flex  justify-center">
-        <h2 className=" py-12 text-[#0a0b09]  mx-4 absolute text-4xl font-semibold ">Wellcome To <span className="text-5xl text-[#050501] underline">Rubina Bangels</span> Shope</h2>
+        <h2 id="Home" className=" font-Poppins py-12 text-[#000000]  mx-4 absolute text-4xl font-light ">Wellcome To <span className="text-5xl text-[#ffffff]  underline font-semibold ">Rubina Bangels</span> Shope</h2>
         <img
-          className="w-screen h-[70vh] object-cover"
+          className=" container h-[70vh]"
           src={slides[currentIndex].image}
           alt={slides[currentIndex].caption}
         />
