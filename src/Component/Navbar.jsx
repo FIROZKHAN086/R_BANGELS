@@ -25,7 +25,7 @@ const Navbar = () => {
     className="flex  relative items-center justify-between bg-gray-800 text-white px-6 py-4 shadow-lg">
       {/* Logo */}
       <div className="text-2xl font-bold">
-        <a href="/" className="hover:text-blue-400">
+        <a to={"/"} className="hover:text-blue-400">
           RB-BANGELS
         </a>
       </div>
@@ -55,24 +55,24 @@ const Navbar = () => {
 
       {/* Navigation Links (Desktop) */}
       <div className="hidden lg:flex space-x-6 text-lg">
-        <a
-          href="/"
+        <Link
+          to={"/"}
           className="hover:text-blue-400 transition duration-300"
         >
           Home
-        </a>
-        <a
-          href="/tranders"
+        </Link>
+        <Link
+          to={"/tranders"}
           className="hover:text-blue-400 transition duration-300"
         >
           Tranders
-        </a>
-        <a
-          href="/spacel"
+        </Link>
+        <Link
+          to={"/spacel"}
           className="hover:text-blue-400 transition duration-300"
         >
           Spacel
-        </a>
+        </Link>
       </div>
             <Link to={'/cart'}>
             <button><FaCartPlus/></button>
@@ -88,24 +88,24 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="lg:hidden absolute z-50 flex flex-col justify-center items-center top-16 left-0 w-full bg-gray-800 text-white p-4">
           <div className="space-y-4">
-            <a
-              href="/"
+            <Link
+              to={"/"}
               className="block text-lg hover:text-blue-400 transition duration-300"
             >
               Home
-            </a>
-            <a
-              href="/tranders"
+            </Link>
+            <Link
+              to={"/tranders"}
               className="block text-lg hover:text-blue-400 transition duration-300"
             >
               Tranders
-            </a>
-            <a
-              href="/spacel"
+            </Link>
+            <Link
+              to={"/spacel"}
               className="block text-lg hover:text-blue-400 transition duration-300"
             >
               Spacel
-            </a>
+            </Link>
            
             <Link to="/login">
               <button className="bg-blue-500 mt-5 hover:bg-blue-600 text-white px-4 py-2 rounded transition duration-300">

@@ -9,7 +9,7 @@ export const StoreContext = createContext({
 });
 
 // Custom hook to use cart context
-export const useCart = () => useContext(StoreContext);
+export const useSto = () => useContext(StoreContext);
 
 const StoreContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);

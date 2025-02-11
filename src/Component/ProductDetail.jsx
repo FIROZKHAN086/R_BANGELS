@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { FaStar, FaRegStar } from "react-icons/fa"; 
-import { useCart } from "../Context/Context";
+import { useSto } from "../Context/Context";
 
 const ProductDetail = () => {
-  const { addToCart } = useCart();
+  const { addToCart } = useSto();
   // Getting product ID from the URL
   const { id } = useParams();
 

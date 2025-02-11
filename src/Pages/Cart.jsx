@@ -2,11 +2,11 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { useCart } from '../Context/Context';
+import { useSto } from '../Context/Context';
 
 
 const Cart = () => {
-  const { cart, removeFromCart, clearCart } = useCart();
+  const { cart, removeFromCart, clearCart } = useSto();
 
   const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
@@ -41,7 +41,7 @@ const Cart = () => {
           <div className="mt-8 flex justify-between items-center">
             <p className="text-2xl font-semibold">Total: &#8377;{totalPrice}</p>
 
-            <div>
+            <div className='flex flex-wrap gap-4'>
               <button
                 className="bg-blue-500 text-white px-6 py-2 rounded-lg mr-4 hover:bg-blue-600"
                 onClick={clearCart} // Clear the cart
