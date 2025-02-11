@@ -8,7 +8,7 @@ import { useSto } from '../Context/Context';
 const Cart = () => {
   const { cart, removeFromCart, clearCart } = useSto();
 
-  const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity + 10, 0);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -39,7 +39,10 @@ const Cart = () => {
           </div>
 
           <div className="mt-8 flex justify-between items-center">
+            <div>
+            <p className="text-xl font-mono">Delivery Fee: &#8377;10</p>
             <p className="text-2xl font-semibold">Total: &#8377;{totalPrice}</p>
+            </div>
 
             <div className='flex flex-wrap gap-4'>
               <button

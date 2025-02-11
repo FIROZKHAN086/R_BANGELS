@@ -3,6 +3,7 @@ import { FaCarAlt, FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import {motion} from 'motion/react'
 
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -22,7 +23,7 @@ const Navbar = () => {
       opacity:1,
       animationDuration:3,
     }}
-    className="flex sticky w-screen z-50 top-0 mb-10 bg-white/20 text-black font-semibold backdrop-blur-lg shadow-md items-center justify-between  px-6 py-4 ">
+    className="flex sticky w-screen z-50 top-0 mb-10 bg-white/20 text-black font-semibold  backdrop-blur-lg shadow-md items-center justify-between  px-6 py-4 ">
       {/* Logo */}
       <div className="text-2xl font-bold">
         <a to={"/"} className="hover:text-blue-400">

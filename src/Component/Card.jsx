@@ -2,7 +2,7 @@
 import React from 'react';
 import { FaStar, FaRegStar } from 'react-icons/fa'; // Import react-icons for stars
 import { Link } from 'react-router-dom'; // Import Link for routing
-import { StoreContext, useSto } from '../Context/Context'; // Import the Cart context
+import {  useSto } from '../Context/Context'; // Import the Cart context
 
 const Card = () => {
   const { addToCart } = useSto(); // Access the addToCart function from context
