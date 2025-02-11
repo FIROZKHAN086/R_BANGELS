@@ -37,7 +37,7 @@ const Navbar = () => {
           className="text-white focus:outline-none"
         >
           <svg
-            className="w-6 h-6"
+            className="w-6 text-black h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
