@@ -15,7 +15,8 @@ const Cart = () => {
       <h2 className="text-3xl font-bold text-center mb-6">Your Cart</h2>
 
       {cart.length === 0 ? (
-        <div className="text-center">Your cart is empty</div>
+       <> <div className="text-center">Your cart is empty</div>
+       <Link to={'/'}> <button className='bg-black text-white'>Buy Now</button></Link></>
       ) : (
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
