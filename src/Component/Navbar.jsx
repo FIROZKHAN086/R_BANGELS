@@ -90,18 +90,21 @@ const Navbar = () => {
           <div className="space-y-4">
             <Link
               to={"/"}
+              onClick={toggleMenu}
               className="block text-lg hover:text-blue-400 transition duration-300"
             >
               Home
             </Link>
             <Link
               to={"/tranders"}
+              onClick={toggleMenu}
               className="block text-lg hover:text-blue-400 transition duration-300"
             >
               Tranders
             </Link>
             <Link
               to={"/spacel"}
+              onClick={toggleMenu}
               className="block text-lg hover:text-blue-400 transition duration-300"
             >
               Spacel
