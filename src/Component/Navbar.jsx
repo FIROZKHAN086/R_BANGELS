@@ -25,7 +25,7 @@ const Navbar = () => {
     }}
     className="flex sticky w-screen z-50 top-0 mb-10 bg-white/20 text-black font-semibold  backdrop-blur-lg shadow-md items-center justify-between  px-6 py-4 ">
       {/* Logo */}
-      <div className="text-2xl font-bold">
+      <div className="nav text-2xl font-bold">
         <a to={"/"} className="hover:text-blue-400">
           RB-BANGELS
         </a>
