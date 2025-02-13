@@ -41,8 +41,26 @@ const StoreContextProvider = ({ children }) => {
     setCart([]);
   };
 
+  const updateQuantity = (id, action) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === id
+          ? {
+              ...item,
+              quantity:
+                action === 'increase'
+                  ? item.quantity + 1
+                  : item.quantity > 1
+                  ? item.quantity - 1
+                  : item.quantity,
+            }
+          : item
+      )
+    );
+  };
+
   return (
-    <StoreContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+    <StoreContext.Provider value={{ cart, addToCart, removeFromCart, clearCart , updateQuantity }}>
       {children}
     </StoreContext.Provider>
   );

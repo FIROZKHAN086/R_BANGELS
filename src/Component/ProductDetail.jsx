@@ -69,7 +69,7 @@ const ProductDetail = () => {
     id: 6, 
     images: [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuxc2P5h9dfS07juMHlNKQv2Wj7bX7S0a_KlwsXnnwQsyt8b6cbO7dg9LXov2D5LRY2po&usqp=CAU',
-      'https://m.media-amazon.com/images/I/71P8sU8AVzL._AC_UY300_.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuxc2P5h9dfS07juMHlNKQv2Wj7bX7S0a_KlwsXnnwQsyt8b6cbO7dg9LXov2D5LRY2po&usqp=CAU',
       'https://m.media-amazon.com/images/I/61S2eRr5bRL._AC_UY300_.jpg'
     ],
     rating: 4, 
@@ -178,7 +178,10 @@ const ProductDetail = () => {
           <button
             className="bg-blue-500 text-white w-full py-2 rounded-lg mt-4 hover:bg-blue-600 transition duration-300"
             onClick={() => { 
-              addToCart(product);
+              addToCart({
+                ...product, 
+                image: product.images[0] 
+              });
               navigate('/cart');
             }}
           >
