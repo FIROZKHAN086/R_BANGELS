@@ -8,15 +8,27 @@ const Home = () => {
   const slides = [
     {
       id: 1,
-      image: 'https://img.weddingbazaar.com/shaadisaga_production/photos/pictures/000/877/592/new_medium/NTW-316.jpg?1558588199',
+      image: 'https://wp.missmalini.com/wp-content/uploads/2018/03/Bridal-Bangles.jpg',
     },
     {
       id: 2,
-      image: 'https://wp.missmalini.com/wp-content/uploads/2018/03/Bridal-Bangles.jpg',
+      image: 'https://img.weddingbazaar.com/shaadisaga_production/photos/pictures/000/877/592/new_medium/NTW-316.jpg?1558588199',
     },
     {
       id: 3,
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThw2tVdkG0XHITmgXxYzD0xdv-RUGRh-0_nsLh_BJQE9mSLTtLtrENHhwL7naRbUNsL0E&usqp=CAU',
+    },
+    {
+      id: 4,
+      image: 'https://cdn0.weddingwire.in/article/9416/3_2/1280/jpg/6149-marriage-bangles-dotdusk-lead.webp',
+    },
+    {
+      id: 5,
+      image: 'https://cdn.shopify.com/s/files/1/0276/8666/6376/files/Bridal_Bangle_Stack_3_2048x2048.jpg',
+    },
+    {
+      id: 6,
+      image: 'https://cdn.shopify.com/s/files/1/0276/8666/6376/files/Bridal_Bangle_Stack_2048x2048.jpg',
     },
   ];
 
