@@ -42,7 +42,7 @@ const Home = () => {
               alt={`Slide ${slide.id}`}
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-5xl mx-2 font-bold text-white bg-black bg-opacity-50 px-4 py-2 rounded">
+              <h2 id='text' className="text-5xl mx-2 font-bold text-white bg-black bg-opacity-50 px-4 py-2 rounded">
                 RUBINA BANGLES Shop
               </h2>
             </div>

@@ -19,7 +19,7 @@ const Card = () => {
   ];
 
   return (
-    <div className=" w-screen container  mx-auto px-4 py-8  ">
+    <div className=" font w-screen container  mx-auto px-4 py-8  ">
       <h2 className="text-3xl font-bold text-center mb-6">Our Bangels Collection</h2>
 
       <div className="grid grid-cols-1   sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
