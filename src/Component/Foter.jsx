@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Foter = () => {
   return (
@@ -49,14 +50,14 @@ const Foter = () => {
             >
               <FaTwitter />
             </a>
-            <a
-              href="#om"
+            <Link
+              to={'https://www.instagram.com/khan____0086/'}
               target="_blank"
               rel="noreferrer"
               className="text-gray-400 hover:text-white text-xl"
             >
               <FaInstagram />
-            </a>
+            </Link>
             <a
               href="#"
               target="_blank"
