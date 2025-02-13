@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
     const [login, setLogin] = useState(false)
@@ -13,17 +14,58 @@ const Login = () => {
 
       const navigate = useNavigate();
 
+      const handleLogin = async (e) => {
+            e.preventDefault();
+            if ( !email || !password) {
+              alert("Enter DEtails")
+            }
+            try {
+              const res = await axios.post("http://localhost:3000/api/users/login", {
+                email,
+                password,
+                rememberMe,
+              });
+        
+              // consol.log(res.data.message);
+              setEmail(" ");
+              setPassword("");
+              setRememberMe(false)
+              navigate("/");
+              console.log('Login Success')
+            } catch (error) {
+              alert(error.response?.data?.message || "Login Failed");
+              console.log(error)
+              
+            }
+          };
 
-    const handleSubmit = (e) => {
-        e.preventDefault(); 
-        console.log("Form Submitted:", { email, password, rememberMe });
-        setEmail('')
-        setPassword('')
-        setRememberMe(false)
-        setAgreeTerms(false);
+          const handleRegister = async (e) => {
+            e.preventDefault();
+            if ( !name || !email || !password) {
+              alert("Enter DEtails")
+            }
+            try {
+              const res = await axios.post("http://localhost:3000/api/users/register", {
+                name,
+                email,
+                password,
+                agreeTerms
+              });
+        
+              alert(res.data.message);
+              setName("");
+              setEmail("");
+              setPassword("");
+              setAgreeTerms(false);
+              setLogin(false);
+            } catch (error) {
+              alert(error.response?.data?.message || "Registration Failed");
+              console.log(error)
+            }
+          };
+
+
     
-        // You can add further logic here (e.g., API calls for login)
-      };
   return (
     <div>
         {login===false ? 
@@ -34,7 +76,7 @@ const Login = () => {
               <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
       
               {/* Login Form */}
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleLogin}>
                 {/* Email Field */}
                 <div className="mb-4">
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -96,11 +138,6 @@ const Login = () => {
                 {/* Login Button */}
                 <button
                   type="submit"
-                  onClick={()=>
-                    setTimeout(() => {
-                      navigate("/")
-                    }, 2000)
-                  }
                   className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition"
                 >
                   Login
@@ -128,7 +165,7 @@ const Login = () => {
         <h2 className="text-2xl font-bold text-center mb-6">Register</h2>
 
         {/* Register Form */}
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleRegister}>
           {/* Name Field */}
           <div className="mb-4">
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -199,7 +236,7 @@ const Login = () => {
           {/* Register Button */}
           <button
             type="submit"
-            onClick={()=>navigate("/")}
+            // onClick={()=>navigate("/")}
             className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition"
           >
             Register

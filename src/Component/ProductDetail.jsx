@@ -2,9 +2,13 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaStar, FaRegStar } from "react-icons/fa"; 
 import { useSto } from "../Context/Context";
+import {Fake} from '../assets/Revies.js'
 import { Navigate } from "react-router-dom";
 
 const ProductDetail = () => {
+
+  
+
   const { addToCart } = useSto();
   // Getting product ID from the URL
   const { id } = useParams();
@@ -69,16 +73,32 @@ const ProductDetail = () => {
       </div>
 
       {/* Similar Products or Other Sections */}
-      <h3 className="text-2xl mt-8">Customer Reviews</h3>
-      <p>No reviews yet, be the first to write a review!</p>
+      <div id="scroll" className=" container max-sm:flex gap-5  overflow-x-scroll ">
+      {Fake.length > 0 ? (
+      Fake.map((review, index) => (
+        <div  key={index} className="border-[1px] mx-2 my-5 rounded-xl border-black px-3 py-4">
+          <p className="font-semibold">{review.reviewer_name}</p>
+          <div className="flex items-center my-2">
+            {Array.from({ length: 5 }, (_, i) => (
+              i < review.rating ? (
+                <FaStar key={i} className="text-yellow-500 mr-1" />
+              ) : (
+                <FaRegStar key={i} className="text-gray-400 mr-1" />
+              )
+            ))}
+          </div>
+          <p>{review.review_text}</p>
+        </div>
+      ))
+    ) : (
+      <p>No Reviwe yet, be the first to write a review!</p>
+    )}
+
+      </div>
+      
 
       {/* Old Month Purchasers */}
-      <h3 className="text-2xl mt-8">Purchased by</h3>
-      <ul>
-        <li>John Doe</li>
-        <li>Jane Smith</li>
-        {/* Add more purchasers */}
-      </ul>
+     
     </div>
     // Produt Compontant Was Don
   );
