@@ -6,6 +6,7 @@ import Login from './Pages/Login'
 import Navbar from './Component/Navbar'
 import Foter from './Component/Foter'
 import ProductDetail from './Component/ProductDetail'
+import Spacel from './Pages/Spacel'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Navbar/>
   <Routes>
  <Route path='/' element={<Main/>} />
+ <Route path='/spacel' element={<Spacel/>}/>
  <Route path="/cart" element={<Cart/>} />
  <Route path="/login" element={<Login/>}/>
  <Route path="/product/:id" element={<ProductDetail />} />
