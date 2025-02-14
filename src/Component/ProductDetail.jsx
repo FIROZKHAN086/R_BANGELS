@@ -193,11 +193,11 @@ const ProductDetail = () => {
       </div>
 
       {/* Reviews Section */}
-      <div id="scroll" className="container mx-2 my-5 max-sm:flex gap-5 overflow-x-scroll max-sm:flex-col ">
-        <div className="text-xl font-bold underline" >Some People Give Our Reviews</div>
+        <div className="text-xl my-3 font-bold underline" >Some People Give Our Reviews</div>
+      <div id="scroll" className="container mx-2 my-5 max-sm:flex gap-5 overflow-x-scroll  ">
         {Fake.length > 0 ? (
           Fake.map((review, index) => (
-            <div key={index} className="border-[1px] mx-2 my-5  rounded-xl border-black px-3 py-4">
+            <div key={index} className="border-[1px] mx-2 my-5 max-sm:flex-row rounded-xl border-black px-3 py-4">
               <p className="font-semibold">{review.reviewer_name}</p>
               <div className="flex items-center my-2">
                 {Array.from({ length: 5 }, (_, i) => (
