@@ -6,17 +6,17 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import {products} from '../src/assets/CardData.js'
+import { products } from '../assets/CardData.js'
 
 
 const Card = () => {
 
-  
+
 
   return (
-    <div id='Card' className=" mx-auto px-4 py-8">
+    <div id='Card' className=" bg-black/20  mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold text-center mb-6">Our Bangles Collection</h2>
-      <h1>Simpal </h1>
+      <h1>Daily Use Parpus </h1>
       <Swiper
         modules={[Pagination, Navigation]}
         pagination={{ clickable: true }}
@@ -40,7 +40,7 @@ const Card = () => {
       >
         {products.map((product) => (
           <SwiperSlide key={product.id}>
-            <div className="  bg-white rounded-lg border-[2px] my-3 hover:scale-[0.8] ease-out border-black shadow-xl shadow-black overflow-hidden">
+            <div className="  border-[2px] bg-white border-black shadow-xl shadow-black rounded-xl transition duration-500 w-full p-3 my-3 hover:scale-[0.8] ease-out    overflow-hidden">
               <img
                 src={product.image}
                 alt={product.description}
