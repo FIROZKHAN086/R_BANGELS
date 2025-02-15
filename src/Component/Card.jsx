@@ -11,16 +11,130 @@ const Card = () => {
   const { addToCart } = useSto();
 
   const products = [
-    { id: 1, image: 'https://m.media-amazon.com/images/I/71cPQD00zmL._AC_UY300_.jpg', rating: 4, description: 'Bangels A', price: '250' },
-    { id: 2, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzWGGyIm9CtI8A_lTyF6x9kh96Q9Lafyo2p0u9_nU8-VIDTIXWSXZ4DvkjsHN-g2Z4yUw&usqp=CAU', rating: 5, description: 'Bangels B', price: '300' },
-    { id: 3, image: 'https://m.media-amazon.com/images/I/71OYK4jGL1L._AC_UY300_.jpg', rating: 3, description: 'Bangels C', price: '220' },
-    { id: 4, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREdRd0dwuSc5puUw3GOvohbP2lJC8A7mp1qw&s', rating: 4, description: 'Bangels D', price: '280' },
-    { id: 5, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRanNajY8738sw7NURepp3l60cCZfs8mve-wyWN1mjKuLr1IpNF_48oUgspsJvwsUdZEho&usqp=CAU', rating: 5, description: 'Bangels E', price: '320' },
-    { id: 6, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuxc2P5h9dfS07juMHlNKQv2Wj7bX7S0a_KlwsXnnwQsyt8b6cbO7dg9LXov2D5LRY2po&usqp=CAU', rating: 4, description: 'Bangels F', price: '270' }
+    {
+      id: 1,
+      image: 'https://m.media-amazon.com/images/I/71cPQD00zmL._AC_UY300_.jpg',
+      rating: 4,
+      description: 'Elegant Gold-Plated Bangles',
+      price: '250',
+    },
+    {
+      id: 2,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzWGGyIm9CtI8A_lTyF6x9kh96Q9Lafyo2p0u9_nU8-VIDTIXWSXZ4DvkjsHN-g2Z4yUw&usqp=CAU',
+      rating: 5,
+      description: 'Traditional Kundan Bangles',
+      price: '300',
+    },
+    {
+      id: 3,
+      image: 'https://m.media-amazon.com/images/I/71OYK4jGL1L._AC_UY300_.jpg',
+      rating: 3,
+      description: 'Simple Silver Bangles',
+      price: '220',
+    },
+    {
+      id: 4,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREdRd0dwuSc5puUw3GOvohbP2lJC8A7mp1qw&s',
+      rating: 4,
+      description: 'Designer Pearl Bangles',
+      price: '280',
+    },
+    {
+      id: 5,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRanNajY8738sw7NURepp3l60cCZfs8mve-wyWN1mjKuLr1IpNF_48oUgspsJvwsUdZEho&usqp=CAU',
+      rating: 5,
+      description: 'Antique Bridal Bangles',
+      price: '320',
+    },
+    {
+      id: 6,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuxc2P5h9dfS07juMHlNKQv2Wj7bX7S0a_KlwsXnnwQsyt8b6cbO7dg9LXov2D5LRY2po&usqp=CAU',
+      rating: 4,
+      description: 'Colorful Glass Bangles Set',
+      price: '270',
+    },
+    {
+      id: 7,
+      image: 'https://m.media-amazon.com/images/I/81cPQD00zmL._AC_UY300_.jpg',
+      rating: 4,
+      description: 'Elegant Gold-Plated Bangles',
+      price: '250',
+    },
+    {
+      id: 8,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzWGGyIm9CtI8A_lTyF6x9kh96Q9Lafyo2p0u9_nU8-VIDTIXWSXZ4DvkjsHN-g2Z4yUw&usqp=CAU',
+      rating: 5,
+      description: 'Traditional Kundan Bangles',
+      price: '300',
+    },
+    {
+      id: 9,
+      image: 'https://m.media-amazon.com/images/I/71OYK4jGL1L._AC_UY300_.jpg',
+      rating: 3,
+      description: 'Simple Silver Bangles',
+      price: '220',
+    },
+    {
+      id: 10,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREdRd0dwuSc5puUw3GOvohbP2lJC8A7mp1qw&s',
+      rating: 4,
+      description: 'Designer Pearl Bangles',
+      price: '280',
+    },
+    {
+      id: 11,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRanNajY8738sw7NURepp3l60cCZfs8mve-wyWN1mjKuLr1IpNF_48oUgspsJvwsUdZEho&usqp=CAU',
+      rating: 5,
+      description: 'Antique Bridal Bangles',
+      price: '320',
+    },
+    {
+      id: 12,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuxc2P5h9dfS07juMHlNKQv2Wj7bX7S0a_KlwsXnnwQsyt8b6cbO7dg9LXov2D5LRY2po&usqp=CAU',
+      rating: 4,
+      description: 'Colorful Glass Bangles Set',
+      price: '270',
+    },
+    {
+      id: 13,
+      image: 'https://m.media-amazon.com/images/I/71cPQD00zmL._AC_UY300_.jpg',
+      rating: 4,
+      description: 'Elegant Gold-Plated Bangles',
+      price: '250',
+    },
+    {
+      id: 14,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzWGGyIm9CtI8A_lTyF6x9kh96Q9Lafyo2p0u9_nU8-VIDTIXWSXZ4DvkjsHN-g2Z4yUw&usqp=CAU',
+      rating: 5,
+      description: 'Traditional Kundan Bangles',
+      price: '300',
+    },
+    {
+      id: 15,
+      image: 'https://m.media-amazon.com/images/I/71OYK4jGL1L._AC_UY300_.jpg',
+      rating: 3,
+      description: 'Simple Silver Bangles',
+      price: '220',
+    },
+    {
+      id: 16,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREdRd0dwuSc5puUw3GOvohbP2lJC8A7mp1qw&s',
+      rating: 4,
+      description: 'Designer Pearl Bangles',
+      price: '280',
+    },
+    {
+      id: 17,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRanNajY8738sw7NURepp3l60cCZfs8mve-wyWN1mjKuLr1IpNF_48oUgspsJvwsUdZEho&usqp=CAU',
+      rating: 5,
+      description: 'Antique Bridal Bangles',
+      price: '320',
+    },
   ];
+  
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div id='Card' className="container mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold text-center mb-6">Our Bangels Collection</h2>
       
       <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
