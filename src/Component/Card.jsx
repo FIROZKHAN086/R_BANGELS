@@ -14,8 +14,10 @@ const Card = () => {
 
 
   return (
-    <div id='Card' className=" bg-black/20  mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-center mb-6">Our Bangles Collection</h2>
+    <>
+   
+    <div id='Card' className=" bg-zinc-900/30   mx-auto px-4 py-8">
+      <h2 className="text-4xl capitalize font-bold text-center mb-6">Our Bangles Collection</h2>
       <h1 class="text-4xl font-bold text-gray-900/80">Daily Use Purpose</h1>
       <Swiper
         modules={[Pagination, Navigation]}
@@ -69,6 +71,7 @@ const Card = () => {
         ))}
       </Swiper>
     </div>
+        </>
   );
 };
 

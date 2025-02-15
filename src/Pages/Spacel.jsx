@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProductCard = ({ image, title, description, price, rating, onAddToCart }) => {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+    <div className="  max-w-sm bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
       <img className="w-full h-48 object-cover" src={image} alt={title} />
       <div className="p-4">
         <h5 className="text-xl font-semibold tracking-tight text-gray-900">{title}</h5>
@@ -80,11 +80,11 @@ const Spacel = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 ">
       {['Wedding', 'Diwali', 'Holi', 'Other Festivals'].map((category) => (
-        <div key={category}>
+        <div key={category} className=''>
           <h2 className="text-2xl font-bold my-4">{category}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {products
               .filter((product) => product.category === category)
               .map((product) => (
