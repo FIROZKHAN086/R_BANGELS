@@ -55,7 +55,7 @@ const Card = () => {
     },
     {
       id: 7,
-      image: 'https://m.media-amazon.com/images/I/81cPQD00zmL._AC_UY300_.jpg',
+      image: '',
       rating: 4,
       description: 'Elegant Gold-Plated Bangles',
       price: '250',

@@ -12,25 +12,23 @@ const Foter = () => {
           <div className="text-center lg:text-left">
             <h1 className="text-2xl font-bold mb-2 hover:scale-110">RB-BANGELS</h1>
             <p className="text-sm text-gray-400">
-              Your one-stop solution for everything.
+              Your One-Disigon  Change All everything.
             </p>
           </div>
 
-          {/* Links */}
-          <div className="flex flex-col items-center lg:items-start space-y-2">
-            <a href="#" className="text-gray-400 hover:text-white">
-              About Us
-            </a>
-            <a href="/" className="text-gray-400 hover:text-white">
-              Privacy Policy
-            </a>
-            <a href="/" className="text-gray-400 hover:text-white">
-              Contact Us
-            </a>
-            <a href="/" className="text-gray-400 hover:text-white">
-              FAQs
-            </a>
-          </div>
+          {/* Address */}
+          <div className="max-w-md mx-auto  rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+  <div className="md:flex">
+    
+    <div className="p-8 text-white">
+      <h1 className="block mt-1 text-lg leading-tight font-medium ">My Address</h1>
+      <p className="mt-2 ">Goshala Road Near Sani Temple , Rajsthan"</p>
+      <hr className="my-4"/>
+      <h1 className="block mt-1 text-lg leading-tight font-medium ">Phone No:</h1>
+      <p className="mt-2 ">63770*****</p>
+    </div>
+  </div>
+</div>
 
           {/* Social Media Icons */}
           <div className="flex space-x-4">
@@ -136,7 +134,7 @@ const Foter = () => {
 
       {/* Bottom Section */}
       <div className="bg-gray-900 py-4">
-        <p className="text-center text-sm text-gray-500">
+        <p className="text-center text-sm ">
           © 2025 FIROZKHAN. All rights reserved.
         </p>
       </div>
