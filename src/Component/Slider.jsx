@@ -33,7 +33,7 @@ const Slider = () => {
         loop={true} // 
         autoplay={{ delay: 1 }} 
         pagination={{ clickable: true }} // ts
-        navigation={true} 
+        
       >
         {/* Carousel Slides */}
         <SwiperSlide>

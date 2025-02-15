@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Slider from './Slider';
-import Card from './Card';
+import Card from '../../Display/Card';
 import Home from '../Pages/Home';
 import Foter from './Foter';
 import Hero from '../Pages/Hero';

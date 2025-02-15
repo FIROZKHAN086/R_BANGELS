@@ -25,6 +25,9 @@ nav{
 #Home{
     font-family: 'Atkinson+Hyperlegible+Mono ' ;
 }
+#Card{
+    font-family: 'Poppins' ,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 #text{
     font-family: 'Kanit','Poppins' serif;
 }

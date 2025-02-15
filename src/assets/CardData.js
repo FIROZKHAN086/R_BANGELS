@@ -1,16 +1,4 @@
-import React from 'react';
-import { FaStar, FaRegStar } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { useSto } from '../Context/Context';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-
-const Card = () => {
-  const { addToCart } = useSto();
-
-  const products = [
+export const products = [
     {
       id: 1,
       image: 'https://m.media-amazon.com/images/I/71cPQD00zmL._AC_UY300_.jpg',
@@ -131,67 +119,3 @@ const Card = () => {
       price: '320',
     },
   ];
-  
-
-  return (
-    <div id='Card' className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-center mb-6">Our Bangels Collection</h2>
-      
-      <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {products.map((product) => (
-          <div key={product.id} className="bg-white hover:shadow-slate-900 rounded-lg shadow-lg hover:scale-110 transition-all overflow-hidden">
-            <img src={product.image} alt={product.description} className="w-full h-48 object-cover" />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2">{product.description}</h3>
-              <div className="flex items-center mb-2">
-                {[...Array(5)].map((_, index) => (
-                  index < product.rating ? <FaStar key={index} className="text-yellow-500 mr-1" /> : <FaRegStar key={index} className="text-gray-400 mr-1" />
-                ))}
-              </div>
-              <p className="text-lg font-semibold text-gray-800"> &#8377;{product.price}</p>   
-              <Link to={`/product/${product.id}`}>
-                <button className="bg-blue-500 text-white w-full py-2 rounded-lg mt-4 hover:bg-blue-600 transition duration-300">
-                  View details
-                </button>
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Swiper for small screens */}
-      <div className="sm:hidden">
-        <Swiper 
-          modules={[Pagination]} 
-          pagination={{ clickable: true }} 
-          spaceBetween={20} 
-          slidesPerView={1.1}
-        >
-          {products.map((product) => (
-            <SwiperSlide key={product.id}>
-              <div className=" border-[2px] border-black rounded-lg shadow-lg overflow-hidden">
-                <img src={product.image} alt={product.description} className="w-full h-48 object-cover" />
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">{product.description}</h3>
-                  <div className="flex items-center mb-2">
-                    {[...Array(5)].map((_, index) => (
-                      index < product.rating ? <FaStar key={index} className="text-yellow-500 mr-1" /> : <FaRegStar key={index} className="text-gray-400 mr-1" />
-                    ))}
-                  </div>
-                  <p className="text-lg font-semibold text-gray-800"> &#8377;{product.price}</p>   
-                  <Link to={`/product/${product.id}`}>
-                    <button className="bg-[#000000] text-white w-full py-2 rounded-lg mt-4 hover:bg-blue-600 transition duration-300">
-                      View details
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </div>
-  );
-};
-
-export default Card;
