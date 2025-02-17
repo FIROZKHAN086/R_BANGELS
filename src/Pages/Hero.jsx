@@ -16,10 +16,10 @@ const Hero = () => {
   useEffect(() => {
     gsap.fromTo(ref.current , {
       opacity:1,
-      x:800,
+      translateX:800,
     },{
       opacity:1,
-      x:0,
+      translateX:0,
       duration:1.2,
       scrollTrigger: {
         trigger: ref.current,
@@ -30,10 +30,10 @@ const Hero = () => {
 
     gsap.fromTo(imgref.current , {
       opacity:0,
-      x:800,
+     translateY:800
     },{
       opacity:1,
-      x:0,
+     translateY:0,
       duration:1.2,
       delay:1,
       scrollTrigger: {
