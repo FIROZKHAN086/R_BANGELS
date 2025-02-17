@@ -1,14 +1,36 @@
-import React, { useState } from "react";
+import React, { useRef, useState ,useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaStar, FaRegStar } from "react-icons/fa"; 
 import { useSto } from "../Context/Context";
 import { Fake } from '../assets/Revies.js';
 import {products} from '../assets/Produt.js'
+import gsap from "gsap";
 
 const ProductDetail = () => {
   const { addToCart } = useSto();
   const { id } = useParams();
   const navigate = useNavigate();
+  const ref = useRef()
+
+  useEffect(() => {
+    gsap.fromTo(
+      ref.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ref.current,
+          start: 'top 80%',
+          end: 'top 30%',
+          toggleActions: 'play none none reverse',
+          
+        },
+      }
+    );
+   
+  }, [])
 
   // Sample products data
 
@@ -25,7 +47,7 @@ const ProductDetail = () => {
   const [mainImage, setMainImage] = useState(product.images[0]);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div ref={ref} className="container mx-auto px-4 py-8">
       {/* Product Details */}
       <div className=" flex flex-col   md:flex-wrap">
         <div className="flex justify-center items-center max-sm:flex-wrap">
