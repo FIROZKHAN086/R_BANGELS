@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../App.css';
+import BlurText from '../Animation/BlurText';
+import gsap from 'gsap';
 
 const Home = () => {
+
+  const ref = useRef()
+
+  useEffect(() => {
+    gsap.from(ref.current , {
+      opacity:1,
+      translateY:-2000,
+    }),
+    gsap.to(ref.current , {
+      opacity:1,
+      translateY:0,
+      duration:2,
+      transitionDuration:0.7
+    })
+  
+    
+  }, [])
+  
+
   const slides = [
     {
       id: 1,
@@ -44,7 +65,7 @@ const Home = () => {
   };
 
   return (
-    <div className="container my-[60px] relative w-screen mt-2 max-w-3xl mx-auto">
+    <div ref={ref} className="container my-[60px]  relative w-screen mt-2 max-w-3xl mx-auto">
       <Slider {...settings}>
         {slides.map((slide) => (
           <div key={slide.id} className="relative">
@@ -54,8 +75,15 @@ const Home = () => {
               alt={`Slide ${slide.id}`}
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <h2 id='text' className="text-5xl mx-2 font-bold text-white bg-black bg-opacity-50 px-4 py-2 rounded">
-                RUBINA BANGLES Shop
+              <h2 id='text'>
+                <BlurText
+                text='RUBINA BANGLES SHOPE'
+                delay={150}
+                 animateBy="words"
+                 direction="top"
+                 className='text-5xl mx-2 font-bold text-white bg-black bg-opacity-50 px-4 py-2 rounded'
+                />
+                
               </h2>
             </div>
           </div>

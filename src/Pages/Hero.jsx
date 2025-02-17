@@ -1,24 +1,80 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { FaStar } from 'react-icons/fa'; // Importing Font Awesome star icon
 import { MdStar } from 'react-icons/md'; // Importing Material Design star icon
+import BlurText from "../Animation/BlurText";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
+
+  const ref = useRef()
+  const imgref = useRef()
+
+  useEffect(() => {
+    gsap.fromTo(ref.current , {
+      opacity:1,
+      x:800,
+    },{
+      opacity:1,
+      x:0,
+      duration:1.2,
+      scrollTrigger: {
+        trigger: ref.current,
+        start: 'top 80%',
+        
+      }
+    })
+
+    gsap.fromTo(imgref.current , {
+      opacity:0,
+      x:800,
+    },{
+      opacity:1,
+      x:0,
+      duration:1.2,
+      delay:1,
+      scrollTrigger: {
+        trigger: imgref.current,
+        start: 'top 90%',
+      }
+    })
+  }, [])
+  
+
   return (
     <>
       {/* Hero */}
-      <div className="  max-w-[85rem] mx-auto my-[70px] px-4 sm:px-6 lg:px-8">
+      <div ref={ref} className="  max-w-[85rem] mx-auto my-[70px] px-4 sm:px-6 lg:px-8">
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
-          <div>
-            <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight">
-              Start your Tradition with <span className="text-blue-600">Rubina Bangles</span>
-            </h1>
+          <div >
+            <div className='flex items-center justify-center flex-wrap'>
+           <BlurText
+           text='
+              Start your Tradition with 
+            '
+
+            delay={150}
+            animateBy="words"
+            direction="top"
+            className=' text-center text-wrap block text-3xl font-bold text-gray-800 sm:text-3xl lg:text-5xl lg:leading-tight'
+           /><BlurText
+           text='RUBINA BANGELS'
+           delay={200}
+            animateBy="words"
+            direction="left"
+            className='block text-3xl font-bold text-[#616bf6] sm:text-3xl lg:text-5xl lg:leading-tight'
+           /> 
             <p className="mt-3 text-lg text-gray-800">
               Hand-picked pros, crafted fine,
               Each piece shines, yours and mine.
               For dreamers bold, for ventures bright,
               Built with care, pure delight.
             </p>
+            </div>
 
             {/* Buttons */}
             <div className="mt-7 grid gap-3 w-full sm:inline-flex">
@@ -90,6 +146,7 @@ const Hero = () => {
 
           <div className="relative  ms-4">
             <img
+            ref={imgref}
               className="w-full  rounded-md"
               src="https://i.pinimg.com/736x/41/81/82/4181820c2b366836c105c210dc7b8cdd.jpg"
               alt="Hero Image"
