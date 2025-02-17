@@ -10,37 +10,26 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
 
-  const ref = useRef()
+  const ref = useRef([])
   const imgref = useRef()
 
   useEffect(() => {
-    gsap.fromTo(ref.current , {
-      opacity:1,
-      translateY:800,
-    },{
-      opacity:1,
-      translateY:0,
-      duration:1.2,
-      scrollTrigger: {
-        trigger: ref.current,
-        start: 'top 80%',
-        
+    gsap.fromTo(
+      ref.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ref.current,
+          start: 'top 80%',
+          end: 'top 30%',
+          toggleActions: 'play none none reverse',
+          
+        },
       }
-    })
-
-    gsap.fromTo(imgref.current , {
-      opacity:0,
-     translateY:800
-    },{
-      opacity:1,
-     translateY:0,
-      duration:1.2,
-      delay:1,
-      scrollTrigger: {
-        trigger: imgref.current,
-        start: 'top 90%',
-      }
-    })
+    );
   }, [])
   
 
