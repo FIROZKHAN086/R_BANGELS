@@ -30,6 +30,22 @@ const Hero = () => {
         },
       }
     );
+    gsap.fromTo(
+      imgref.current,
+      { opacity: 0, y: -50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: imgref.current,
+          start: 'top 80%',
+          end: 'top 30%',
+          toggleActions: 'play none none reverse',
+          
+        },
+      }
+    );
   }, [])
   
 
