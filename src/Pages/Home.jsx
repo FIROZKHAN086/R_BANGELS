@@ -29,7 +29,7 @@ const Home = () => {
   const slides = [
     {
       id: 1,
-      image: 'https://wp.missmalini.com/wp-content/uploads/2018/03/Bridal-Bangles.jpg',
+      image: 'https://cdn.shopify.com/s/files/1/0276/8666/6376/files/Bridal_Bangle_Stack_2048x2048.jpg',
     },
     {
       id: 2,
@@ -49,7 +49,7 @@ const Home = () => {
     },
     {
       id: 6,
-      image: 'https://cdn.shopify.com/s/files/1/0276/8666/6376/files/Bridal_Bangle_Stack_2048x2048.jpg',
+      image: 'https://wp.missmalini.com/wp-content/uploads/2018/03/Bridal-Bangles.jpg',
     },
   ];
 

@@ -32,7 +32,7 @@ const ProductDetail = () => {
    
   }, [])
 
-  // Sample products data
+  
 
 
   // Find the product that matches the ID from the URL
