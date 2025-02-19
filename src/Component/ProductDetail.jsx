@@ -11,22 +11,18 @@ const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const ref = useRef()
+  const [size, setSize] = useState('Medium');
 
   useEffect(() => {
     gsap.fromTo(
       ref.current,
-      { opacity: 0, y: 50 },
+      { opacity: 0, y: 50 , scale:0},
       {
         opacity: 1,
         y: 0,
+        scale:1,
         duration: 1,
-        scrollTrigger: {
-          trigger: ref.current,
-          start: 'top 80%',
-          end: 'top 30%',
-          toggleActions: 'play none none reverse',
-          
-        },
+        
       }
     );
    
@@ -47,7 +43,7 @@ const ProductDetail = () => {
   const [mainImage, setMainImage] = useState(product.images[0]);
 
   return (
-    <div ref={ref} className="container mx-auto px-4 py-8">
+    <div ref={ref} className="container   mx-auto px-4 py-8">
       {/* Product Details */}
       <div className=" flex flex-col   md:flex-wrap">
         <div className="flex justify-center items-center max-sm:flex-wrap">
@@ -64,7 +60,7 @@ const ProductDetail = () => {
                 key={index}
                 src={img}
                 alt={`Thumbnail ${index + 1}`}
-                className={`w-24 h-24 object-cover cursor-pointer border-2 rounded-lg transition-all duration-200 ${mainImage === img ? 'border-blue-500' : 'border-gray-300'}`}
+                className={`w-24 h-24 object-cover m-2 cursor-pointer border-2 rounded-lg transition-all duration-200 ${mainImage === img ? 'border-blue-500' : 'border-gray-300'}`}
                 onClick={() => setMainImage(img)}
               />
             ))}
@@ -74,7 +70,7 @@ const ProductDetail = () => {
         {/* Product Info */}
         <div className="md:ml-8 mt-4 md:mt-0">
           <h2 className="text-3xl font-semibold">{product.description}</h2>
-          <div className="flex items-center my-2">
+          <div ref={ref} className="flex items-center my-2">
             {Array.from({ length: 5 }, (_, index) => (
               index < product.rating ? (
                 <FaStar key={index} className="text-yellow-500 mr-1" />
@@ -84,6 +80,24 @@ const ProductDetail = () => {
             ))}
           </div>
           <p className="text-xl font-bold text-gray-800">Price: &#8377;{product.price}</p>
+          <div>
+          <div className="flex items-center space-x-4">
+      <label htmlFor="size" className="text-lg font-semibold text-gray-700">
+        Select Size:
+      </label>
+      <select
+        id="size"
+        value={size}
+        onChange={(e) => setSize(e.target.value)}
+        className="bg-white border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-32 p-2.5"
+      >
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+      </select>
+    </div>
+          </div>
+          
 
           <p className="mt-4">Estimated shipping date: 2-3 business days</p>
 
@@ -95,7 +109,7 @@ const ProductDetail = () => {
                 ...product, 
                 image: product.images[0] 
               });
-              navigate('/cart');
+              navigate('/checkout');
             }}
           >
             Add to Cart
@@ -107,10 +121,10 @@ const ProductDetail = () => {
 
       {/* Reviews Section */}
         <div className="text-xl my-3 font-bold underline" >Some People Give Our Reviews</div>
-      <div id="scroll" className="container bg-black/60 text-white mx-2 my-5 max-sm:flex gap-5 overflow-x-scroll  ">
+      <div id="scroll" className="container  text-[#313131] mx-2 my-5 max-sm:flex gap-5 overflow-x-scroll  ">
         {Fake.length > 0 ? (
           Fake.map((review, index) => (
-            <div key={index} className="border-[1px] mx-2 bg-black my-5 max-sm:flex-row rounded-xl  border-black px-3 py-4">
+            <div key={index} className="border-[1px] mx-2 bg-gradient-to-r from-[#33CCFF]/30 to-[#FF9933]/30 my-5 max-sm:flex-row rounded-xl  border-black px-3 py-4">
               <p className="font-semibold">{review.reviewer_name}</p>
               <div className="flex items-center my-2">
                 {Array.from({ length: 5 }, (_, i) => (

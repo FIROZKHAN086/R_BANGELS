@@ -7,6 +7,7 @@ import Navbar from './Component/Navbar'
 import Foter from './Component/Foter'
 import ProductDetail from './Component/ProductDetail'
 import Spacel from './Pages/Spacel'
+import Chekout from './Pages/Chekout'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
  <Route path='/spacel' element={<Spacel/>}/>
  <Route path="/cart" element={<Cart/>} />
  <Route path="/login" element={<Login/>}/>
+ <Route path="/checkout" element={<Chekout/>}/>
  <Route path="/product/:id" element={<ProductDetail />} />
 </Routes>
     </div>

@@ -32,11 +32,12 @@ const Hero = () => {
     );
     gsap.fromTo(
       imgref.current,
-      { opacity: 0, y: -50 },
+      { opacity: 0, y: 100 },
       {
         opacity: 1,
         y: 0,
         duration: 1,
+        transitionDuration:0.5,
         scrollTrigger: {
           trigger: imgref.current,
           start: 'top 80%',
@@ -52,11 +53,11 @@ const Hero = () => {
   return (
     <>
       {/* Hero */}
-      <div ref={ref} className="  max-w-[85rem] mx-auto my-[70px] px-4 sm:px-6 lg:px-8">
+      <div  className="  max-w-[85rem] mx-auto my-[70px] px-4 sm:px-6 lg:px-8">
         {/* Grid */}
         <div className="grid md:grid-cols-2  gap-4 md:gap-8 xl:gap-20 md:items-center">
           <div >
-            <div className='flex max-sm:bg-[#3cfccf] p-[3px] rounded-lg items-center justify-center flex-wrap'>
+            <div ref={ref} className='flex max-sm:bg-[#3cfccf] p-[3px] rounded-lg items-center justify-center flex-wrap'>
            <BlurText
            text='
               Start your Tradition with 
@@ -68,12 +69,12 @@ const Hero = () => {
             className=' text-center text-wrap block text-3xl font-bold text-gray-800 sm:text-3xl lg:text-5xl lg:leading-tight'
            /><BlurText
            text='RUBINA BANGELS'
-           delay={200}
+           delay={100}
             animateBy="words"
             direction="left"
             className='block text-3xl font-bold text-[#616bf6] sm:text-3xl lg:text-5xl lg:leading-tight'
            /> 
-            <p className="mt-3 text-lg text-gray-800">
+            <p ref={ref} className="mt-3 text-lg text-gray-800">
               Hand-picked pros, crafted fine,
               Each piece shines, yours and mine.
               For dreamers bold, for ventures bright,
@@ -82,7 +83,7 @@ const Hero = () => {
             </div>
 
             {/* Buttons */}
-            <div className="mt-7 grid gap-3 w-full sm:inline-flex">
+            <div ref={ref} className="mt-7 grid gap-3 w-full sm:inline-flex">
               <a
                 href="#Card"
                 className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
@@ -100,7 +101,7 @@ const Hero = () => {
             {/* End Buttons */}
 
             {/* Review */}
-            <div className="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5">
+            <div ref={ref} className="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5">
               {/* Review */}
               <div className="py-5">
                 <div className="flex gap-x-1">
@@ -124,7 +125,7 @@ const Hero = () => {
               {/* End Review */}
 
               {/* Review */}
-              <div className="py-5">
+              <div ref={ref} className="py-5">
                 <div className="flex gap-x-1">
                   {/* Replacing SVG stars with React Icons */}
                   <FaStar className="size-4 text-gray-800" />

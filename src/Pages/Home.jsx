@@ -12,16 +12,18 @@ const Home = () => {
 
   useEffect(() => {
     gsap.from(ref.current , {
-      opacity:1,
-      translateY:-2000,
+      opacity:0,
+      translateY:-1000,
+
     }),
     gsap.to(ref.current , {
       opacity:1,
       translateY:0,
-      duration:2,
-      transitionDuration:0.7
+      duration:1,
+      transitionDuration:0.7,
     })
-  
+   
+
     
   }, [])
   
@@ -65,7 +67,7 @@ const Home = () => {
   };
 
   return (
-    <div ref={ref} className="container my-[60px]  relative w-screen mt-2 max-w-3xl mx-auto">
+    <div ref={ref} className="container my-[60px]   relative w-screen mt-2 max-w-3xl mx-auto">
       <Slider {...settings}>
         {slides.map((slide) => (
           <div key={slide.id} className="relative">
@@ -74,9 +76,10 @@ const Home = () => {
               src={slide.image}
               alt={`Slide ${slide.id}`}
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 id='text'>
+            <div  className="absolute inset-0 flex items-center justify-center">
+              <h2  id='text'>
                 <BlurText
+                
                 text='RUBINA BANGLES SHOPE'
                 delay={150}
                  animateBy="words"

@@ -58,9 +58,18 @@ const StoreContextProvider = ({ children }) => {
       )
     );
   };
+  
+
+  const handleSizeChange = (id, size) => {
+    setCart((prevCartData) =>
+      prevCartData.map((item) =>
+        item.id === id ? { ...item, size } : item
+      )
+    );
+  };
 
   return (
-    <StoreContext.Provider value={{ cart, addToCart, removeFromCart, clearCart , updateQuantity }}>
+    <StoreContext.Provider value={{ cart, addToCart, removeFromCart, clearCart , updateQuantity ,handleSizeChange}}>
       {children}
     </StoreContext.Provider>
   );
