@@ -33,7 +33,7 @@ const Tasting = () => {
   const customTexts = ['Come On This site And Enjoing It ', 'Cheked This And Give Gaune reviwe '];
 
   return (
-    <div ref={ref} className='bg-gradient-to-t from-black/60 to-gray-950 text-white my-8 capitalize'>
+    <div ref={ref} className=' font-inter bg-gradient-to-t from-black/60 to-gray-950 text-white my-8 capitalize'>
       <ScrollVelocity
         texts={customTexts} 
         velocity={velocity} 

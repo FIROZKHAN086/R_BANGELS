@@ -6,7 +6,14 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily:'Poppins'
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        Atkinson: ["Atkinson Hyperlegible Mono", "serif"],
+        kanti:['Kanit','Poppins' ,"serif"],
+        inter: ["Inter", "sans-serif" ],
+        rail:["Raleway", "serif"]
+
+      },
     },
   },
   plugins: [],

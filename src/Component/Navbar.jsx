@@ -20,32 +20,32 @@ const Navbar = () => {
       className="flex sticky w-[100%] z-[100] rounded-lg top-0 bg-gradient-to-r from-blue-600/25  to-pink-400/60 text-black font-semibold backdrop-blur-lg shadow-md items-center justify-between px-6 py-4"
     >
       {/* Logo */}
-      <div className="text-2xl hover:scale-110 cursor-default font-bold">
+      <div className="text-2xl hover:scale-110 cursor-default font-bold hover:text-white transition duration-300  after:block after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">
         <Link to="/">RB-BANGELS</Link>
       </div>
 
       {/* Desktop Navigation */}
       <div className="hidden lg:flex space-x-6 text-lg">
-        <Link to="/" className="hover:text-blue-400 transition duration-300">
+        <Link to="/" className="hover:text-white transition   after:block after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-700 hover:after:w-full ">
           Home
         </Link>
-        <Link to="/tranders" className="hover:text-blue-400 transition duration-300">
+        <Link to="/tranders" className="hover:text-white transition   after:block after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-700 hover:after:w-full">
           Tranders
         </Link>
-        <Link to="/spacel" className="hover:text-blue-400 transition duration-300">
+        <Link to="/spacel" className="hover:text-white transition   after:block after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-700 hover:after:w-full">
           Spacel
         </Link>
       </div>
 
       {/* Right Side (Cart & Login) */}
       <div className="flex items-center gap-4">
-        <Link to="/cart">
+        <Link to="/checkout">
           <button>
             <FaCartPlus size={22} />
           </button>
         </Link>
         <Link to="/login">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition duration-300">
+          <button className="bg-blue-500/60 hover:bg-blue-600 text-white px-4 py-2 rounded transition duration-300">
             Login
           </button>
         </Link>
@@ -84,14 +84,14 @@ const Navbar = () => {
   xmlns="http://www.w3.org/2000/svg"
 >
   <text
-    x="7"
+    x="5"
     y="20"
     fontSize="16"
     fontWeight="bold"
     fill="white"
     
   >
-    Hi
+    RB
     <animate
       attributeName="opacity"
       values="0;2;0"

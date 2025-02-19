@@ -57,7 +57,7 @@ const Hero = () => {
         {/* Grid */}
         <div className="grid md:grid-cols-2  gap-4 md:gap-8 xl:gap-20 md:items-center">
           <div >
-            <div ref={ref} className='flex max-sm:bg-[#3cfccf] p-[3px] rounded-lg items-center justify-center flex-wrap'>
+            <div ref={ref} className='flex font-poppins  max-sm:bg-[#3cfccf] p-[3px] rounded-lg items-center justify-center flex-wrap'>
            <BlurText
            text='
               Start your Tradition with 
@@ -119,7 +119,7 @@ const Hero = () => {
 
                 <div className="mt-5">
                   {/* Example of using a Material Design star icon */}
-                 <h1 className='text-xl font-sans font-semibold'>Googel</h1>
+                 <h1 className='text-xl font-sans font-semibold'>Google</h1>
                 </div>
               </div>
               {/* End Review */}
@@ -141,7 +141,7 @@ const Hero = () => {
 
                 <div className="mt-5">
                   {/* Example of using a Material Design star icon */}
-                  <h1 className='text-xl font-semibold font-'>Instagrm</h1>
+                  <h1 className='text-xl font-semibold font-'>Instagram</h1>
                 </div>
               </div>
               {/* End Review */}

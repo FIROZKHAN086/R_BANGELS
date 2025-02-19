@@ -77,7 +77,7 @@ const Home = () => {
               alt={`Slide ${slide.id}`}
             />
             <div  className="absolute inset-0 flex items-center justify-center">
-              <h2  id='text'>
+              <h2 id='text'  className='font-kanti'>
                 <BlurText
                 
                 text='RUBINA BANGLES SHOPE'

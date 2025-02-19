@@ -8,6 +8,7 @@ const Foter = () => {
 
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef()
+  const add = useRef()
 
   useEffect(() => {
     gsap.fromTo(ref.current, {
@@ -26,17 +27,33 @@ const Foter = () => {
           
         },
       })
+    gsap.fromTo(add.current, {
+      opacity: 0,
+      y:50,
+    },
+      {
+        opacity:1,
+        y:0,
+        transitionDuration:0.5,
+        scrollTrigger: {
+          trigger: add.current,
+          start: 'top 80%',
+          end: 'top 30%',
+          toggleActions: 'play none none reverse',
+          
+        },
+      })
   }, [])
 
 
 
   return (
-    <footer  className="bg-gray-800  w-screen text-white">
+    <footer  className="bg-gray-800 font-rail italic w-screen text-white">
       <div className="container mx-auto py-8 px-4">
         {/* Top Section */}
-        <div  className="flex flex-col lg:flex-row justify-between items-center gap-8">
+        <div  ref={add} className="flex flex-col lg:flex-row justify-between items-center gap-8">
           {/* Logo */}
-          <div ref={ref}  className="text-center lg:text-left">
+          <div   className="text-center lg:text-left">
             <h1  className="text-2xl font-bold mb-2 hover:scale-110">RB-BANGELS</h1>
             <p  className="text-sm text-gray-400">
               Your One-Disigon  Change All everything.
@@ -44,7 +61,7 @@ const Foter = () => {
           </div>
 
           {/* Address */}
-          <div ref={ref}  className="max-w-md mx-auto  rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+          <div ref={add}  className="max-w-md mx-auto  rounded-xl shadow-md overflow-hidden md:max-w-2xl">
             <div className="md:flex">
 
               <div  className="p-8 text-white">
@@ -58,8 +75,9 @@ const Foter = () => {
           </div>
 
           {/* Social Media Icons */}
-          <div ref={ref} className="flex space-x-4">
+          <div  className="flex space-x-4">
             <a
+            ref={ref}
               href="#"
               target="_blank"
               rel="noreferrer"
@@ -68,6 +86,7 @@ const Foter = () => {
               <FaFacebookF />
             </a>
             <a
+            ref={ref}
               href="#"
               target="_blank"
               rel="noreferrer"
@@ -76,6 +95,7 @@ const Foter = () => {
               <FaTwitter />
             </a>
             <Link
+            ref={ref}
               to={'https://www.instagram.com/khan____0086/'}
               target="_blank"
               rel="noreferrer"
@@ -84,6 +104,7 @@ const Foter = () => {
               <FaInstagram />
             </Link>
             <a
+            ref={ref}
               href="#"
               target="_blank"
               rel="noreferrer"
