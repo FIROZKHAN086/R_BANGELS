@@ -11,7 +11,7 @@ const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const ref = useRef()
-  const [size, setSize] = useState('Medium');
+  const [size, setSize] = useState('Select Size');
 
   useEffect(() => {
     gsap.fromTo(
@@ -82,15 +82,13 @@ const ProductDetail = () => {
           <p className="text-xl font-bold text-gray-800">Price: &#8377;{product.price}</p>
           <div>
           <div className="flex items-center space-x-4">
-      <label htmlFor="size" className="text-lg font-semibold text-gray-700">
-        Select Size:
-      </label>
       <select
         id="size"
         value={size}
         onChange={(e) => setSize(e.target.value)}
         className="bg-white border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-32 p-2.5"
       >
+        <option value=" Select Size"> Select Size:</option>
         <option value="Small">Small</option>
         <option value="Medium">Medium</option>
         <option value="Large">Large</option>
