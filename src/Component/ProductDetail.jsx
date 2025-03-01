@@ -7,6 +7,11 @@ import {products} from '../assets/Produt.js'
 import gsap from "gsap";
 
 const ProductDetail = () => {
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[]) 
+
   const { addToCart } = useSto();
   const { id } = useParams();
   const navigate = useNavigate();

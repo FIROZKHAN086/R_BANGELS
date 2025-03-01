@@ -7,13 +7,13 @@ import Display from './Display.jsx';
 import Tasting from './Tasting.jsx';
 const Main = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Home />
       <Hero />
       <Tasting/>
       <Display />
       <Slider />
-      <Foter />
+      
     </div>
   )
 }

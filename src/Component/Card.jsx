@@ -37,7 +37,7 @@ const Card = () => {
   }, []);
 
   return (
-    <div id='Card' className="bg-gradient-to-r from-black to-pink-300  mx-auto px-4 py-8">
+    <div id='Card' className="bg-gradient-to-r from-black to-pink-300 w-full overflow-x-hidden px-4 py-8">
       <h2>
         <BlurText
           text='Our Bangles Collection'

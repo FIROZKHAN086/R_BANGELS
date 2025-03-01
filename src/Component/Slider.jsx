@@ -8,7 +8,7 @@ const Slider = () => {
   return (
     <>
     
-    <div className="max-w-screen-xl mx-auto my-8">
+    <div className="max-w-screen-xl mx-auto my-8 overflow-x-hidden">
       {/* Carousel Title */}
       <h2 className="text-center text-2xl font-bold mb-4">Bridal Bangles Collection</h2>
 

@@ -8,6 +8,10 @@ import Foter from './Component/Foter'
 import ProductDetail from './Component/ProductDetail'
 import Spacel from './Pages/Spacel'
 import Chekout from './Pages/Chekout'
+import About from './Page/About'
+import Privacy from './Page/Privacy'
+import Terms from './Page/Terms'
+import Contact from './Page/Contact'
 
 const App = () => {
   return (
@@ -20,7 +24,12 @@ const App = () => {
  <Route path="/login" element={<Login/>}/>
  <Route path="/checkout" element={<Chekout/>}/>
  <Route path="/product/:id" element={<ProductDetail />} />
+ <Route path="/privacy" element={<Privacy/>}/>
+ <Route path="/about" element={<About/>}/>
+ <Route path="/terms" element={<Terms/>}/>
+ <Route path="/contact" element={<Contact/>}/>
 </Routes>
+<Foter/>
     </div>
   )
 }

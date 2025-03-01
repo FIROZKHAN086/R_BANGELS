@@ -67,7 +67,7 @@ const Home = () => {
   };
 
   return (
-    <div ref={ref} className="container my-[60px]   relative w-screen mt-2 max-w-3xl mx-auto">
+    <div ref={ref} className="container relative w-full mt-2 max-w-3xl mx-auto">
       <Slider {...settings}>
         {slides.map((slide) => (
           <div key={slide.id} className="relative">
