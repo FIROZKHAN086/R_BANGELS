@@ -64,7 +64,7 @@ const Navbar = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 100 }}
-            className="fixed inset-y-0 right-0 z-50 w-[80%] sm:w-64 bg-slate-900/90 backdrop-blur-lg shadow-lg"
+            className="fixed flex flex-col gap-4 z-10 h-screen items-center text-white  inset-y-0 right-0  w-[80%] sm:w-64 bg-slate-900/90 backdrop-blur-lg shadow-lg"
           >
             {/* Close Button */}
             <button
