@@ -55,31 +55,29 @@ const Hero = () => {
       {/* Hero */}
       <div  className="  max-w-[85rem] mx-auto my-[70px] px-4 sm:px-6 lg:px-8">
         {/* Grid */}
-        <div className="grid md:grid-cols-2  gap-4 md:gap-8 xl:gap-20 md:items-center">
-          <div >
-            <div ref={ref} className='flex font-poppins  max-sm:bg-[#3cfccf] p-[3px] rounded-lg items-center justify-center flex-wrap'>
-           <BlurText
-           text='
-              Start your Tradition with 
-            '
-
-            delay={150}
-            animateBy="words"
-            direction="top"
-            className=' text-center text-wrap block text-3xl font-bold text-gray-800 sm:text-3xl lg:text-5xl lg:leading-tight'
-           /><BlurText
-           text='RUBINA BANGELS'
-           delay={100}
-            animateBy="words"
-            direction="left"
-            className='block text-3xl font-bold text-[#616bf6] sm:text-3xl lg:text-5xl lg:leading-tight'
-           /> 
-            <p ref={ref} className="mt-3 text-lg text-gray-800">
-              Hand-picked pros, crafted fine,
-              Each piece shines, yours and mine.
-              For dreamers bold, for ventures bright,
-              Built with care, pure delight.
-            </p>
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
+          <div className="px-4 sm:px-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center flex-wrap gap-2 sm:gap-4">
+              <BlurText
+                text='Start your Tradition with'
+                delay={150}
+                animateBy="words"
+                direction="top"
+                className='text-2xl sm:text-3xl lg:text-5xl font-bold text-center text-gray-800'
+              />
+              <BlurText
+                text='RUBINA BANGELS'
+                delay={100}
+                animateBy="words"
+                direction="left"
+                className='block text-3xl font-bold text-[#616bf6] sm:text-3xl lg:text-5xl lg:leading-tight'
+              /> 
+              <p ref={ref} className="mt-3 text-lg text-gray-800">
+                Hand-picked pros, crafted fine,
+                Each piece shines, yours and mine.
+                For dreamers bold, for ventures bright,
+                Built with care, pure delight.
+              </p>
             </div>
 
             {/* Buttons */}

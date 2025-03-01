@@ -17,10 +17,10 @@ const Navbar = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="flex sticky w-[100%] z-[100] rounded-lg top-0 bg-gradient-to-r from-blue-600/25  to-pink-400/60 text-black font-semibold backdrop-blur-lg shadow-md items-center justify-between px-6 py-4"
+      className="flex sticky w-full z-[100] rounded-lg top-0 bg-gradient-to-r from-blue-600/25 to-pink-400/60 text-black font-semibold backdrop-blur-lg shadow-md items-center justify-between px-4 sm:px-6 py-3 sm:py-4"
     >
       {/* Logo */}
-      <div className="text-2xl hover:scale-110 cursor-default font-bold hover:text-white transition duration-300  after:block after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+      <div className="text-xl sm:text-2xl hover:scale-110 cursor-default font-bold">
         <Link to="/">RB-BANGELS</Link>
       </div>
 
@@ -56,7 +56,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu with Slide-in Animation */}
+      {/* Mobile Menu with improved styling */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -64,7 +64,7 @@ const Navbar = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 100 }}
-            className="fixed inset-y-0 z-50  text-bla font-semibold backdrop-blur-lg shadow-md h-screen right-0 w-64 bg-slate-900/75  text-white shadow-x flex flex-col items-center py-10 space-y-6"
+            className="fixed inset-y-0 right-0 z-50 w-[80%] sm:w-64 bg-slate-900/90 backdrop-blur-lg shadow-lg"
           >
             {/* Close Button */}
             <button
@@ -73,7 +73,6 @@ const Navbar = () => {
             >
               <FiX className="w-7 h-7" />
             </button>
-
 
             <div className="text-white">
             <svg

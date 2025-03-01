@@ -52,11 +52,15 @@ const Card = () => {
         modules={[Pagination, Navigation]}
         pagination={{ clickable: true }}
         navigation
-        spaceBetween={20}
-        slidesPerView={1.09}
+        spaceBetween={10}
+        slidesPerView={1}
         breakpoints={{
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
           640: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 20,
           },
           768: {
@@ -70,7 +74,7 @@ const Card = () => {
         }}
       >
         {products.map((product, index) => (
-          <SwiperSlide key={product.id} className='hover:scale-[0.9] transition duration-500'>
+          <SwiperSlide key={product.id} className='p-2'>
             <div
               ref={(el) => (cardsRef.current[index] = el)}
               className="border-[2px] bg-gradient-to-r from-white via-gray-100 to-gray-200 border-black shadow-xl shadow-black rounded-xl w-full p-3 my-3 ease-out overflow-hidden"
@@ -78,7 +82,7 @@ const Card = () => {
               <img
                 src={product.image}
                 alt={product.description}
-                className="w-full h-48 object-cover"
+                className="w-full h-40 sm:h-48 object-cover"
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2 text-gray-800">{product.description}</h3>
